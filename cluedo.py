@@ -1,3 +1,6 @@
+
+import os
+import sys
 #Rollen:
 
 #Kolonel van Geelen
@@ -37,23 +40,26 @@ SpecVraag12 = 'Heeft u lang haar? (ja/nee)\n---> '
 #Rosa
 SpecVraag13 ='Vind u zichzelf knap? (ja/nee)\n---> '
 SpecVraag14 ='Heeft u ervaring met het zijn van een filmster? (ja/nee)\n---> '
-SpecVraag15 ='Hoelang bent u?(Antwoord in CM) (ja/nee)\n---> '
+SpecVraag15 ='Hoelang bent u?(Antwoord in CM)\n---> '
 #Rosa
 
 #M.W Blaauw
-SpecVraag16 = ''
-SpecVraag17 = ''
-SpecVraag18 = ''
+SpecVraag16 = 'Gaat u vaak naar feesten? (ja/nee)\n---> '
+SpecVraag17 = 'Draagt u wel eens buitinissige kleding? (ja/nee)\n---> '
+SpecVraag18 = 'Hoeveel weegt u? (Antwoord in kg)'
 #M.W Blaauw
 
 #Vragen
+os.system('cls')
 input('---------------------------------------------------\nHallo! Begin hier met uw auditie voor de Talents action\nTyp \033[1mStart\033[0m om te beginnen!\n---> ')
-
-Naam = input('Wat is uw voor en achternaam?\n---> ')
+os.system('cls')
+Naam = input('--------------------------\nWat is uw voor en achternaam?\n---> ')
+os.system('cls')
 
 Geslacht = input('Bent u een Man/Vrouw?\n---> ')
-Leeftijd = input('Wat is uw leeftijd?\n---> ')
-Ervaring = input('Heeft u ervaring met acteren?\n---> ')
+Leeftijd = input int(('Wat is uw leeftijd? (Leeftijd in jaren)\n---> '))
+Ervaring = input('Heeft u ervaring met acteren? (ja/nee)\n---> ')
+os.system('cls')
 
 if Geslacht == "Man":
     Vraag1 = input(SpecVraag1)
@@ -75,6 +81,10 @@ else:
     Vraag16 = input(SpecVraag16)
     Vraag17 = input(SpecVraag17)
     Vraag18 = input(SpecVraag18)
+
+if Geslacht == "Man" and Leeftijd >=18 and Ervaring == "ja" and Vraag1 == "ja" and Vraag2 == "ja" and Vraag3 == "ja":
+    print('Je bent geslaagd!')
+
     
 
 
