@@ -1,4 +1,4 @@
-
+#Alexander den Otter  -  99067410
 import os
 import sys
 #Rollen:
@@ -57,7 +57,7 @@ Naam = input('--------------------------\nWat is uw voor en achternaam?\n---> ')
 os.system('cls')
 
 Geslacht = input('Bent u een Man/Vrouw?\n---> ')
-Leeftijd = input int(('Wat is uw leeftijd? (Leeftijd in jaren)\n---> '))
+Leeftijd = int(input('Wat is uw leeftijd? (Leeftijd in jaren)\n---> '))
 Ervaring = input('Heeft u ervaring met acteren? (ja/nee)\n---> ')
 os.system('cls')
 
@@ -83,8 +83,27 @@ else:
     Vraag18 = input(SpecVraag18)
 
 if Geslacht == "Man" and Leeftijd >=18 and Ervaring == "ja" and Vraag1 == "ja" and Vraag2 == "ja" and Vraag3 == "ja":
-    print('Je bent geslaagd!')
+    print('Gefeliciteerd! '+ str(Naam)+ 'U kunt auditie doen voor Kolonel van Geelen!')
 
-    
+elif Geslacht == "Man" and Vraag4 == "ja" and Vraag5 == "ja" and Vraag6 == "ja":
+    print('Gefeliciteerd! '+ str(Naam)+ ' U kunt auditie doen voor Dominee Groenewoud!')
+
+elif Geslacht == "Man" and Vraag7 == "ja" and Vraag8 == "ja" and Vraag9 == "ja":
+    print('Gefeliciteerd! '+ str(Naam)+ ' U kunt auditie doen voor Professor Pimpel')
+
+elif Geslacht == "Vrouw" and Vraag10 == "ja" and Vraag11 == "ja" and Vraag12 == "ja":
+    print ('Gefeliciteerd! '+ str(Naam)+ ' U kunt auditie doen voor Mevrouw de Wit!')
+
+elif Geslacht == "Vrouw" and Vraag13 == "ja" and Vraag14 == "ja" and Vraag15 >=175:
+    print('Gefeliciteerd !'+ str(Naam)+ ' U kunt auditie doen voor Rosa Roodhart!')
+
+elif Geslacht == "Vrouw" and Vraag16 == "ja" and Vraag17 == "ja" and Vraag18 <=120:
+    print('Gefeliciteed! '+ str(Naam)+ ' U kunt auditie doen voor Mevrouw Blaauw van Draet!')
+
+else:
+    print('Helaas! '+ str(Naam)+ ' U kunt geen auditie doen bij ons!')
+
+
+
 
 
